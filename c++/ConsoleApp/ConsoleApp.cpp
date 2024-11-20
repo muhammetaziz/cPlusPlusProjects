@@ -1,53 +1,65 @@
 ﻿#include <iostream>
 using namespace std;
 
-int main()
-{
-	int islem;
-	float firsNum, secondNum, result;
-	bool isNext = true;
-
-	while (isNext)
-	{
-
-		cout << "Yapmak istediğiniz işlemi giriniz (Toplama:1,Cikarma:2,Carpma:3,Bolme:4,Cikis:0)" << endl;
-		cin >> islem;
-		if (islem < 1 || islem >= 5)
-		{
-			cout << "Hatali islem girdiniz" << endl;
-		}
-		else
-		{
-			cout << "birinci sayiyi giriniz" << endl;
-			cin >> firsNum;
-
-			cout << "ikinci sayiyi giriniz" << endl;
-			cin >> secondNum;
-		}
-
-		if (islem == 1)
-		{
-			cout << firsNum + secondNum << endl;
-		}
-		else if (islem == 2)
-		{
-			cout << firsNum - secondNum << endl;
-		}
-		else if (islem == 3)
-		{
-			cout << firsNum * secondNum << endl;
-		}
-		else if (islem == 4)
-		{
-			cout << firsNum / secondNum << endl;
-		}
-		else if (islem == 0)
-		{
-			isNext = false;
-			break;
-		}
-	}
-	cout << "İyi Günler Dileriz";
-	return 0;
+void getNumbers(float& firstNum, float& secondNum) {
+	cout << "Birinci sayıyı giriniz: ";
+	cin >> firstNum;
+	cout << "İkinci sayıyı giriniz: ";
+	cin >> secondNum;
 }
 
+void performOperation(int operation, float firstNum, float secondNum) {
+	switch (operation) {
+	case 1: {
+		cout << "Sonuç: " << firstNum + secondNum << endl;
+		break;
+	}
+	case 2: {
+		cout << "Sonuç: " << firstNum - secondNum << endl;
+		break;
+	}
+	case 3: {
+		cout << "Sonuç: " << firstNum * secondNum << endl;
+		break;
+	}
+	case 4: {
+		if (secondNum != 0) {
+			cout << "Sonuç: " << firstNum / secondNum << endl;
+		}
+		else {
+			cout << "Hata: Sıfıra bölme hatası!" << endl;
+		}
+		break;
+	}
+	case 0: {
+		cout << "Çıkış yapılıyor..." << endl;
+		break;
+	}
+	default: {
+		cout << "Yanlış işlem seçtiniz. Lütfen geçerli bir seçenek giriniz!" << endl;
+	}
+	}
+}
+
+int main() {
+	int islem;
+	float firsNum = 0, secondNum = 0;
+	bool isNext = true;
+
+	while (isNext) {
+		cout << "\nYapmak istediğiniz işlemi giriniz:\n"
+			<< "Toplama: 1, Çıkarma: 2, Çarpma: 3, Bölme: 4, Çıkış: 0" << endl;
+		cin >> islem;
+
+		if (islem == 0) {
+			isNext = false;
+		}
+		else {
+			getNumbers(firsNum, secondNum);
+			performOperation(islem, firsNum, secondNum);
+		}
+	}
+
+	cout << "İyi günler dileriz!" << endl;
+	return 0;
+}
