@@ -5,7 +5,9 @@ VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicCalculator", "ConsoleApp.vcxproj", "{CCB625C1-BAC6-4796-AD49-C868B4F048C6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication2", "..\ConsoleApplication2\ConsoleApplication2.vcxproj", "{39F8F3B6-AAA8-483C-86DE-8B096FD2BCC7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AreaCalculation", "..\ConsoleApplication2\ConsoleApplication2.vcxproj", "{39F8F3B6-AAA8-483C-86DE-8B096FD2BCC7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.vcxproj", "{9D12D383-4757-42CD-B853-05722C09E146}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{39F8F3B6-AAA8-483C-86DE-8B096FD2BCC7}.Release|x64.Build.0 = Release|x64
 		{39F8F3B6-AAA8-483C-86DE-8B096FD2BCC7}.Release|x86.ActiveCfg = Release|Win32
 		{39F8F3B6-AAA8-483C-86DE-8B096FD2BCC7}.Release|x86.Build.0 = Release|Win32
+		{9D12D383-4757-42CD-B853-05722C09E146}.Debug|x64.ActiveCfg = Debug|x64
+		{9D12D383-4757-42CD-B853-05722C09E146}.Debug|x64.Build.0 = Debug|x64
+		{9D12D383-4757-42CD-B853-05722C09E146}.Debug|x86.ActiveCfg = Debug|Win32
+		{9D12D383-4757-42CD-B853-05722C09E146}.Debug|x86.Build.0 = Debug|Win32
+		{9D12D383-4757-42CD-B853-05722C09E146}.Release|x64.ActiveCfg = Release|x64
+		{9D12D383-4757-42CD-B853-05722C09E146}.Release|x64.Build.0 = Release|x64
+		{9D12D383-4757-42CD-B853-05722C09E146}.Release|x86.ActiveCfg = Release|Win32
+		{9D12D383-4757-42CD-B853-05722C09E146}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
