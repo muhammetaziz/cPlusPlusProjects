@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <chrono>
 using namespace std;
 
 //void reverseArray(int dizi[], int size) {
@@ -44,38 +45,70 @@ using namespace std;
 //	cout << "Ortalama uzerinde not alan ogrencilerin sayisi:  "<< sayac<< "  not ortalaması: " << diziOrtalaması(notlar, 10) << endl;
 //}
 
+//
+//void asalMi(int sayi) {
+//	int sayac = 0;
+//	for (int i = 2; i < sayi; i++)
+//	{
+//		if (sayi % i == 0)
+//		{
+//			sayac++;
+//			if (sayac != 0)
+//			{
+//				break;
+//			}
+//		}
+//	}
+//	if (sayac == 0)
+//	{
+//		cout << sayi << ", ";
+//	}
+//}
+//
+//int main() {
+//	chrono::steady_clock::time_point begin = chrono::steady_clock::now();
+//	int userNum;
+//	cout << "Bir Sayi Giriniz: ";
+//	cin >> userNum; 
+//	for (int i = 2; i < userNum; i++)
+//	{
+//		asalMi(i);
+//	}
+//	cout << endl;
+//	chrono::steady_clock::time_point end = chrono::steady_clock::now();
+//	cout << "Time diffrance= " << chrono::duration_cast<chrono::microseconds>(end - begin).count() << " microsecond" << endl;
+//}
 
-void asalMi(int sayi) {
-	int sayac = 0;
-	for (int i = 2; i < sayi; i++)
+bool farkliMi(int arr[], int size) {
+	for (int i = 0; i < 4; i++)
 	{
-		if (sayi % i == 0)
+		for (int j = i + 1; j < size; j++)
 		{
-			sayac++;
+			if (arr[i] == arr[j])
+			{
+				return false;
+				 
+			}
 		}
-	}
-	if (sayac ==0)
-	{
-		cout << sayi << ", ";
-	}
-	 
-}
 
-
+	}
+	return true;
+} 
 int main() {
-	int userNum;
-	cout << "Bir Sayi Giriniz: ";
-	cin >> userNum;
+	int dizi[4];
 
-	for (int i = 2; i < userNum; i++)
+	for (int i = 1000; i <= 9999; i++)
 	{
-		asalMi(i);
-	}
-	 
-		 
-
-	 
-
-
-
-}
+		int temp = i;
+		for (int j = 0; j < 4; j++)
+		{
+			dizi[j] = temp % 10;
+			temp = temp / 10;
+		}
+		if (farkliMi(dizi, 4))
+		{
+			cout << i << endl; 
+		} 
+	} 
+} 
+   
