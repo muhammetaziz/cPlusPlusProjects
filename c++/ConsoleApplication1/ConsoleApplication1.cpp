@@ -47,19 +47,49 @@ using namespace std;
 //
 //
 //}
-
+ 
 int main() {
 
-	int dizi4[3][3] = { {1,2,3}, {4,5,6},{7,8,9} };
-	 
+    int matris1[3][3];
+    int matris2[3][3];
+    int matris3[3][3];
 
-	for (int i = 0; i < 3; i++)
-	{
-		for (int k = 0; k < 3; k++)
-		{
-			cout << dizi4[i][k]<<",";
+    // Matris 1'in elemanlarını al
+    cout << "Matris 1'in elemanlarini giriniz:\n";
+    for (int i = 0; i < 3; i++) {
+        for (int k = 0; k < 3; k++) {
+            cout << i + 1 << ". satirin " << k + 1 << ". sutununun degerini giriniz: ";
+            cin >> matris1[i][k];
+        }
+    }
 
-		}
-		cout << endl;
-	}
+    // Matris 2'nin elemanlarını al
+    cout << "Matris 2'nin elemanlarini giriniz:\n";
+    for (int i = 0; i < 3; i++) {
+        for (int k = 0; k < 3; k++) {
+            cout << i + 1 << ". satirin " << k + 1 << ". sutununun degerini giriniz: ";
+            cin >> matris2[i][k];
+        }
+    }
+
+    // Matris çarpımını yap
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            matris3[i][j] = 0; // Çarpım sonucu matrisinin başlatılması
+            for (int k = 0; k < 3; k++) {
+                matris3[i][j] += matris1[i][k] * matris2[k][j];
+            }
+        }
+    }
+
+    // Sonuç matrisini ekrana yazdır
+    cout << "Matris 1 ile Matris 2'nin carpimi (Matris 3):\n";
+    for (int i = 0; i < 3; i++) {
+        for (int k = 0; k < 3; k++) {
+            cout << matris3[i][k] << " ";  // Elemanları boşlukla ayırarak yazdırıyoruz
+        }
+        cout << endl;  // Her satırdan sonra yeni satır başlatıyoruz
+    }
+
+    return 0;
 }
