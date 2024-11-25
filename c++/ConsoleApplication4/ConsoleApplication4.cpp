@@ -62,8 +62,7 @@ using namespace std;
 //
 //#pragma endregion
 //}
-#pragma endregion
-
+#pragma endregion 
 #pragma region pointers
 
 //
@@ -78,8 +77,7 @@ using namespace std;
 //	cout << ptr << endl;			//pointerın işaret ettiği adresi gösterir
 //	cout << *ptr << endl;			//pointerın işaret ettiği adresin içeriğini gösterir
 //}
-#pragma endregion 
-
+#pragma endregion  
 #pragma region arrayPointer
 //
 //
@@ -99,6 +97,72 @@ using namespace std;
 //
 //	} 
 //}
+#pragma endregion 
+#pragma region NewNullDelete
+
+
+//int main() {
+//
+//	int* ptr;					//Pointerın kendisine yer ayrılıyor 
+//	ptr = NULL;					//Ayrılan yer Null değerini dönderiyor
+//
+//
+//	if (ptr!=NULL)				//Pointer Null a eşitse değer ataması yapılıyor
+//	{
+//		*ptr = 15;
+//	}
+//	else
+//	{
+//		ptr = new int(20);		//Aksi durumda Yeni bir yer ayrılıyor ve içerisine değer atanıyor
+//	}
+//	cout << *ptr;
+//	delete ptr;					//Pointer bellekten siliniyor
+//
+//}
+#pragma endregion
+#pragma region PointerDöndurenFonksiyonlar
+//
+//
+//int fonksiyon()
+//{
+//	int* ptr = new int;
+//	*ptr = 15;
+//	return *ptr;
+//
+//
+//} 
+//int main() {
+//
+//	int* ptr2 = new int;
+//
+//	*ptr2 = fonksiyon();
+//	if (ptr2!=NULL)
+//	{
+//		cout << *ptr2;
+//	}
+//	else
+//	{
+//		cout << "Pointerınız Null Deger Döndermiştir"<<endl;
+//	}
+//
+//
+//}
 #pragma endregion
 
 
+int main() {
+	int a[5], * p, z;
+	for (int i = 0; i < 5; i++)
+	{
+
+		a[i] = i * i;     // 0  1  4  9  16
+	}
+
+	p = a;						//	p= 0  1  4  9  16
+	z = *(p + 1) + *(a + 2);    //	1+4
+
+	cout << z << endl;			// 5
+
+	  
+
+}
