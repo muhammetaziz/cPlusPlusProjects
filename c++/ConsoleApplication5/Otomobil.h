@@ -6,18 +6,26 @@ class Otomobil
 public:
 	Otomobil(string _model, string _renk, int _beygirGucu,int _ruhsatNo);
 	~Otomobil();
-	int beygirGucu;
-	string model;
-	string renk;
-
-	void GetRuhsatNo();
+	 
+	int GetRuhsatNo();
 	void SetRuhsatNo(int _ruhsatNo);
 
+	string GetModel();
+	void SetModel(string _model);
+
+	string GetRenk();
+	void SetRenk(string _renk);
+
+	int GetBeygirGucu();
+	void SetBeygirGucu(int _beygirGucu);
 
 	void ruhsatBilgileriGoster();
 
 
 private:
+	string model;
+	int beygirGucu;
 	int ruhsatNo;
+	string renk;
 };
 

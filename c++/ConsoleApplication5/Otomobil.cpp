@@ -5,8 +5,11 @@ Otomobil::Otomobil(string _model, string _renk, int _beygirGucu, int _ruhsatNo) 
 	renk = _renk;
 	beygirGucu = _beygirGucu;
 	ruhsatNo = _ruhsatNo;
+
+	cout << Otomobil::model << " Objesinin Constructoru cagirildi" << endl;
 }
 Otomobil::~Otomobil() {
+	cout << Otomobil::model << " Objesinin Destructoru cagirildi" << endl;
 }
 
 
@@ -16,10 +19,16 @@ void Otomobil::ruhsatBilgileriGoster() {
 	cout << "Beygir: " << Otomobil::beygirGucu << endl;
 }
 
-void Otomobil::GetRuhsatNo() {
-	cout << Otomobil::ruhsatNo << endl;
-}
 
-void Otomobil::SetRuhsatNo(int _ruhsatNo) {
-	ruhsatNo = _ruhsatNo;
-}
+
+int Otomobil::GetRuhsatNo() { return ruhsatNo; }
+void Otomobil::SetRuhsatNo(int _ruhsatNo) { ruhsatNo = _ruhsatNo; }
+
+string Otomobil::GetModel() { return model; }
+void Otomobil::SetModel(string _model) { model = _model; }
+
+string Otomobil::GetRenk() { return renk; }
+void Otomobil::SetRenk(string _renk) { renk = _renk; }
+
+int Otomobil::GetBeygirGucu() { return beygirGucu; }
+void Otomobil::SetBeygirGucu(int _beygirGucu) { beygirGucu = _beygirGucu; }
