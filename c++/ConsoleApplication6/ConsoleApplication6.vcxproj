@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{12361abf-eb85-426f-9523-f42168e817f8}</ProjectGuid>
-    <RootNamespace>ConsoleApplication5</RootNamespace>
+    <ProjectGuid>{d4027caa-a834-4526-9e82-50ff04c73613}</ProjectGuid>
+    <RootNamespace>ConsoleApplication6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>CarProject</ProjectName>
+    <ProjectName>FileReadWrite</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,11 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MainProgram.cpp" />
-    <ClCompile Include="Otomobil.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Otomobil.h" />
+    <ClCompile Include="ConsoleApplication6.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

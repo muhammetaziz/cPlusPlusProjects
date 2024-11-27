@@ -4,7 +4,7 @@ using namespace std;
 class Otomobil
 {
 public:
-	Otomobil(string _model, string _renk, int _beygirGucu,int _ruhsatNo);
+	Otomobil(string _model, string _renk, int _beygirGucu,int _ruhsatNo,int _kapiSayisi);
 	~Otomobil();
 	 
 	int GetRuhsatNo();
@@ -21,11 +21,13 @@ public:
 
 	void ruhsatBilgileriGoster();
 
+	int* pKapiSayisi;
 
 private:
 	string model;
 	int beygirGucu;
 	int ruhsatNo;
 	string renk;
+
 };
 

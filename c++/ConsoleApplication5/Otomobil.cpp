@@ -1,15 +1,17 @@
 #include "Otomobil.h"
 
-Otomobil::Otomobil(string _model, string _renk, int _beygirGucu, int _ruhsatNo) {
+Otomobil::Otomobil(string _model, string _renk, int _beygirGucu, int _ruhsatNo, int _kapiSayisi) {
 	model = _model;
 	renk = _renk;
 	beygirGucu = _beygirGucu;
 	ruhsatNo = _ruhsatNo;
+	pKapiSayisi = new int(_kapiSayisi);
 
 	cout << Otomobil::model << " Objesinin Constructoru cagirildi" << endl;
 }
 Otomobil::~Otomobil() {
 	cout << Otomobil::model << " Objesinin Destructoru cagirildi" << endl;
+	delete pKapiSayisi;
 }
 
 
