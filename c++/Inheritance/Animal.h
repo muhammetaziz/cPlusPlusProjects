@@ -12,9 +12,11 @@ public:
 	void eat();
 	void sleep();
 
-private:
+	//Sadecee baðlý oldugu sýnýflar görebilir main metodu dahil baþka sýnýflar göremez              
+protected:
 	string ad;
+	string tür;
 };
 
- 
+
 

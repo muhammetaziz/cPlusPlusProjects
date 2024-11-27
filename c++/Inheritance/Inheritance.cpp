@@ -1,14 +1,29 @@
 ﻿#include <iostream>
 using namespace std;
 #include "Animal.h"
+#include "Cat.h"
+#include "Dog.h"
+#include "Bird.h"
 int main()
 {
-	Animal animal("Kedi");
+	Cat kedi("tekir");
+	Dog kopek("Garip");
+	Bird kus("Boncuk");
 
-	cout<<animal.getHayvanAd()<<endl;
-	animal.setHayvanAd("Kopek");
-	cout<<animal.getHayvanAd() << endl;
-	animal.eat();
-	animal.sleep();
+	kedi.eat();
+	kedi.sleep();
+	kedi.catchMouse();
+	
+	cout << endl;
+
+	kopek.eat();
+	kopek.sleep();
+	kopek.dogBarking();
+
+	cout << endl;
+	
+	kus.eat();
+	kus.sleep();
+	kus.birdFlying();
 }
 
