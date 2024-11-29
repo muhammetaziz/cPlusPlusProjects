@@ -11,3 +11,6 @@ Cat::~Cat() {
 void Cat::catchMouse() {
 	cout << Animal::getHayvanAd() << " Fare Yakaliyor" << endl;
 }
+void Cat::eviniGoster(string ev) {
+	cout << ad << " " << ev << " de yasýyor" << endl;
+}

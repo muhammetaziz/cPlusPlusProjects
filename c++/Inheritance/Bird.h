@@ -8,7 +8,8 @@ public:
 	~Bird();
 
 	void birdFlying();
-
+	void sesCikar();
+	void eviniGoster(string ev);
 private:
 
 };

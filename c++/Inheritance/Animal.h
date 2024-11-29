@@ -11,9 +11,13 @@ public:
 
 	void eat();
 	void sleep();
+	virtual void sesCikar() { cout << "Hayvan Ses Cikar Fonksiyonu Cagirildi" << endl; }
 
-	//Sadecee baðlý oldugu sýnýflar görebilir main metodu dahil baþka sýnýflar göremez              
+	virtual void eviniGoster(string ev) { cout << "Hayvanlar barýnakta yasar " <<ev<< endl; }
+
+
 protected:
+	//Sadecee baðlý oldugu sýnýflar görebilir main metodu dahil baþka sýnýflar göremez              
 	string ad;
 	string tür;
 };

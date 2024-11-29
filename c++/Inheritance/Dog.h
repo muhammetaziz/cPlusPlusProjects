@@ -15,6 +15,9 @@ public:
 		return kopekSayisi;
 	}
 	static int karesiniHesapla(int x);
+	void sesCikar();
+	void eviniGoster(string ev);
+
 protected:
 	static int kopekSayisi;
 };

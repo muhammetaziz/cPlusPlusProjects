@@ -12,6 +12,10 @@ public:
 	~Cat();
 
 	void catchMouse();
+	void sesCikar() {
+		cout << "Miyaw Miyaw Nigga" << endl;
+	}
+	void eviniGoster(string ev);
 private:
 
 };

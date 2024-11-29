@@ -21,3 +21,4 @@ string Animal::getHayvanAd() {
 void Animal::setHayvanAd(string _ad) {
 	ad = _ad;
 }
+

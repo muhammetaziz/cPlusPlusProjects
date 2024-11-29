@@ -4,26 +4,26 @@ using namespace std;
 #include "Cat.h"
 #include "Dog.h"
 #include "Bird.h"
+
+
+
 int main()
 {
-	Cat kedi("tekir");
+	Animal* hayvan;
+	Cat kedi("Tekir");
 	Dog kopek("Garip");
 	Bird kus("Boncuk");
 
-	kedi.eat();
-	kedi.sleep();
-	kedi.catchMouse();
-	
-	cout << endl;
+	//animal sınıfından olusturulan pointer kedi sınıfından olusturulan nesneye atanıyor ve kedi sınıfındakı fonksiyonu cagırıyor. Böyle olmasaydı kendi fonksiyonunu cagırırdı
+	hayvan = &kedi;
+	hayvan->sesCikar();
+	hayvan->eviniGoster("Koli ");
+	 
+	hayvan = &kopek;
+	hayvan->eviniGoster("Kulube ");
 
-	kopek.eat();
-	kopek.sleep();
-	kopek.dogBarking();
+	hayvan = &kus;
+	hayvan->eviniGoster("Kafes ");
 
-	cout << endl;
-	
-	kus.eat();
-	kus.sleep();
-	kus.birdFlying();
 }
 
