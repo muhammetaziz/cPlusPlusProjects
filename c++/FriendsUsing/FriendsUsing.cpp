@@ -1,15 +1,13 @@
 ﻿#include <iostream>
 #include "Otomobil.h"
+#include "Motor.h"
 using namespace std;
-
-void bilgilerNerede(Otomobil oto) {
-	cout << oto.yil << " " <<oto.marka<<endl ;
-}
-
+ 
 
 int main()
 {
-	Otomobil oto("Volvo", 2024);
-	oto.bilgileriGoster();
-	bilgilerNerede(oto);
+	Otomobil oto("Camaro", 1500, 1975);
+	Motor m;
+	m.motorGucuOrtalama(oto);
+	 
 }

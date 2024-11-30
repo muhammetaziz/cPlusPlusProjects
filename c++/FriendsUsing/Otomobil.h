@@ -2,22 +2,16 @@
 #include <iostream>
 #include "Motor.h"
 using namespace std;
+ 
 
 
 class Otomobil
 {
-public:
-	int yil;
-	Otomobil(string _marka,int _yil) {
-		marka = _marka;
-		yil = _yil;
-	}
-
-	void bilgileriGoster();
-	
-	friend void bilgilerNerede(Otomobil oto);
-
 private:
-	string marka;
+	int normalMotorGucu;
+	int turboMotorGucu;
+	string model;
+public:
+	Otomobil(string _model, int _normalMotorGucu, int _turboMotorGucu);
+	friend class Motor;
 };
-

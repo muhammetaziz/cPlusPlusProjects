@@ -1,4 +1,9 @@
 #include "Otomobil.h"
 using namespace std;
-
-void Otomobil::bilgileriGoster() { cout << marka << " " << yil << endl; }
+ 
+ 
+Otomobil::Otomobil(string _model, int _normalMotorGucu, int _turboMotorGucu) {
+	model = _model;
+	normalMotorGucu = _normalMotorGucu;
+	turboMotorGucu = _turboMotorGucu;
+}
