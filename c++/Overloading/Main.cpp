@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "Kare.h"
 using namespace std;
 
 class Complex
@@ -27,11 +28,11 @@ public:
 
 	// << Operatoru asırı yukleme  cout<<c1<<endl;
 	friend ostream& operator<<(ostream& os, const Complex& c) {
-		os << c.real << "+" << c.imag <<"i";
+		os << c.real << "+" << c.imag << "i";
 		return os;
 	}
 	void display() {
-		cout << real <<" + " << imag << "i" << endl;
+		cout << real << " + " << imag << "i" << endl;
 		cout << endl;
 	}
 };
@@ -40,21 +41,34 @@ public:
 
 int main()
 {
-	// 1 ve 2. nesnemizi toplayıp c3 uzerıne yazılıyor
-	Complex c1(1.9, 3.8);
-	Complex c2(7.8, 2.6);
-	Complex c3;
+#pragma region Complex sınıfı maini
 
-	c3 = c1 + c2;
-	c3.display();
+	//// 1 ve 2. nesnemizi toplayıp c3 uzerıne yazılıyor
+	//Complex c1(1.9, 3.8);
+	//Complex c2(7.8, 2.6);
+	//Complex c3;
 
-	c3 = c1 - c2;
-	c3.display();
+	//c3 = c1 + c2;
+	//c3.display();
 
-	c3 = c1 * c2;
-	c3.display();
+	//c3 = c1 - c2;
+	//c3.display();
 
-	cout << c3;
+	//c3 = c1 * c2;
+	//c3.display();
 
+	//cout << c3;
+#pragma endregion
+
+#pragma region Kare Sınıfı Main fonksiyonu
+	Kare k1(5);
+	Kare k2(7);
+	Kare k3;
+	k3 = k1 + k2;
+	k3 = k1 * k2;
+	cout << k1 << endl;
+	cout << k2 << endl;
+	cout << k3 << endl;
+#pragma endregion
 
 }
