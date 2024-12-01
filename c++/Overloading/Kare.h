@@ -28,7 +28,6 @@ public:
 	}
 	Kare operator*(const Kare& other) {
 		return kenarUzunlugu * other.kenarUzunlugu;
-	}
-
+	} 
 };
 
