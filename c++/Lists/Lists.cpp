@@ -33,6 +33,15 @@ int main()
 	it++;
 	liste.insert(it, 87);
 	printList(liste);
+	
+	it = liste.begin();
+	it++;
+	liste.insert(it, 8,7);
+	printList(liste);
 
+	cout << endl;
+	for (int n : liste) {
+		cout << n << ", ";
+	}
 
 }
