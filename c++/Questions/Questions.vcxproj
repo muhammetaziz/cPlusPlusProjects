@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{216bebd3-3dde-4bff-bbaf-a953ae92d992}</ProjectGuid>
-    <RootNamespace>InterviewQuestions</RootNamespace>
+    <ProjectGuid>{2cbc1c2c-364c-472d-b94c-8ec5f428a5ae}</ProjectGuid>
+    <RootNamespace>Questions</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bank.cpp" />
-    <ClCompile Include="InterviewQuestions.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Bank.h" />
+    <ClCompile Include="Questions.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
