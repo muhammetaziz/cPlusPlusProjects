@@ -50,18 +50,78 @@ using namespace std;
 //    return 0;
 //}
 #pragma endregion
-
 #pragma region Fibonacci
-int main() {
-	int first=1, second=1, result;
-	cout << first << " " << second << " ";
-	for (int i = 0; i < 20; i++)
-	{
-		result = first + second;
-		cout << result << " " ;
-		first = second;
-		second = result;
-	}
+//int main() {
+//	int boyut;
+//	cout << "Serimiz kac elemana kadar devam etsin ?: ";
+//	cin >> boyut;
+//	int first=1, second=1, result;
+//	cout << first  << "\n" << second <<endl;
+//	for (int i = 0; i <= boyut; i++)
+//	{
+//		result = first + second;
+//		cout << result <<endl;
+//		first = second;
+//		second = result;
+//	}
+//}
+#pragma endregion
+#pragma region Mukemmel sayılar
 
+
+int exelentNumber(int number) {
+	int result = 0;
+	for (int i = 1; i < number; i++)
+	{
+		if (number % i == 0)
+		{
+			result += i;
+		}
+	}
+	return result;
+}
+
+int main() {
+	int islem = 0;
+	cout << "1- Mukemmel sayi hesaplama" << endl;
+	cout << "2- Mukemmel sayi listesi" << endl;
+	cout << "9- Cikis" << endl;
+	cin >> islem;
+
+	switch (islem)
+	{
+	case 1: {
+		int sayi;
+		cout << "Sorgulamak istediginiz sayiyi giriniz" << endl;
+		cin >> sayi;
+		if (exelentNumber(sayi) == sayi)
+		{
+			cout << sayi << " Mukemmel sayidir." << endl;
+		}
+		else
+		{
+			cout << sayi << " Mukemmel sayi degildir." << endl;
+		}
+		break;
+	}
+	case 2: {
+		int boyut;
+		cout << "Hangi sayiya kadar kontrol etmek istiyorsunuz (max:2,147,483,647)" << endl;
+		cin >> boyut;
+		 
+		for (int i = 1; i < boyut; i++)
+		{
+			if (exelentNumber(i) == i)
+			{
+				cout << i << " Mukemmel sayidir." << endl;
+			} 
+		}
+		break;
+	}
+	case 9: break;
+	default:
+		cout << "Gecerli bir deger giriniz";
+		break;
+	} 
 }
 #pragma endregion
